@@ -8,11 +8,13 @@ public class PrimitivaServidor {
 		String respuesta;
 		do {
 			linea = canal.leerCombinacion();
-			respuesta = canal.comprobarBoleto ();
-			canal.enviarRespuesta (respuesta);
+			respuesta = canal.comprobarBoleto();
+			canal.enviarRespuesta(respuesta);
+			System.out.println(canal.comprobarBoleto());
+			System.out.print("Si no desea jugar escriba 'FIN'");
 		} while (!linea.equals("FIN"));
 		canal.finSesion();
-		
+
 	}
 
 }
